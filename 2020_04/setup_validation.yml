@@ -1,0 +1,10 @@
+- name: Fetch remediation playbooks through the Insights API
+  hosts: localhost
+  gather_fact: false
+
+  tasks:
+    - name: Check connectivity to cloud.redhat.com
+
+    - name: Check authentication to Insights
+
+    - name: Check Inisghts agent on the system
