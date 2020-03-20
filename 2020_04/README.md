@@ -37,9 +37,10 @@ sudo insights-client --register
 
 - Launch the setup_validation.yml playbook with the following command (you need ansible)
 ```
-ansible-playbook setup_validation.yml
+ansible-playbook setup_validation.yml -K
 ```
-You should get 1 OK statement and no errors at the end of the playbook execution.
+The playbook will prompt for a sudo password and then for your Red Hat credentials
+You should get 4 OK statement and no errors at the end of the playbook execution.
 
 
 ## Follow the hands-on during the Webinar
