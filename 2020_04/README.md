@@ -8,6 +8,14 @@
 ### These steps are optional and only needed if your system is not ready for the hands-on
 
 - Install a RHEL 7 or RHEL 8 system (directions will cover RHEL 8)
+- If you are using a RHEL on a public cloud provider make sure you disable the RHUI first
+```
+sudo yum -y remove rh-amazon-rhui-client* rhui-azure-rhel* google-rhui-client-rhel*
+sudo cat << EOF > /etc/yum/pluginconf.d/product-id.conf
+[main]
+enabled=1
+EOF
+```
 - Register it with subscription-manager
 ```
 sudo subscription-manager register --auto-attach
