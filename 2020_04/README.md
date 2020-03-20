@@ -1,5 +1,10 @@
 # Directions
-## Prepare your Environment
+
+## Ensure you have a RHEL subscription available
+- You can use a 30 Day Red Hat Enterprise Linux Server Self-Supported Evaluation available [here](https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux/try-it)
+- Red Hat Developer accounts may not work with Insights
+
+## Prepare your environment
 ### These steps are optional and only needed if your system is not ready for the hands-on
 
 - Install a RHEL 7 or RHEL 8 system (directions will cover RHEL 8)
@@ -9,7 +14,7 @@ sudo subscription-manager register --auto-attach
 ```
 - Install Ansible and Insights agent
 ```
-sudo yum install ansible insights-client
+sudo yum install ansible insights-client --enablerepo=ansible-2-for-rhel-8-x86_64-rpms
 ```
 - Register your system to Insights
 ```
