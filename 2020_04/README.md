@@ -32,8 +32,6 @@ sudo insights-client --register
 
 ## Ensure your system is ready
 **This is mandatory**
-If your system shows errors you will not be able to do the hands-on.
-Go back to preparation steps if needed.
 
 - Clone this repository or download both playbooks from this directory :
 ```
@@ -45,8 +43,11 @@ curl -O https://raw.githubusercontent.com/AutomationWitch/webinars/master/2020_0
 ```
 ansible-playbook setup_validation.yml -K
 ```
-The playbook will prompt for a sudo password and then for your Red Hat credentials
-You should get 4 OK statement and no errors at the end of the playbook execution.
+*The playbook will prompt for a BECOME (sudo) password and then for your Red Hat credentials.*
+
+You should get **4 OK statements** and no errors at the end of the playbook execution.
+
+If your system shows errors you will not be able to do the hands-on. Go back to preparation steps if needed.
 
 
 ## Follow the hands-on during the Webinar
