@@ -1,11 +1,15 @@
 - name: Fetch remediation playbooks through the Insights API
   hosts: localhost
-  gather_fact: false
+  gather_facts: false
+  vars_prompt:
+    - name: insights_username
+      private: false
+    - name: insights_password
 
   tasks:
     - name: Get remediation plans list
       uri:
-        url: https://cloud.redhat.com/api/remediations/v1/remediations
+        url: 'https://cloud.redhat.com/api/remediations/v1/remediations'
         method: GET
         status_code: 200
         url_username: '{{ insights_username }}'
@@ -19,7 +23,7 @@
 
     - name: Download remediation playbooks
       get_url:
-        url: https://cloud.redhat.com/api/remediations/v1/remediations/{{ item.id }}/playbook
+        url: 'https://cloud.redhat.com/api/remediations/v1/remediations/{{ item.id }}/playbook'
         dest: ./{{ item.name }}.yml
         url_username: '{{ insights_username }}'
         url_password: '{{ insights_password }}'
