@@ -11,10 +11,10 @@
 - If you are using a RHEL on a public cloud provider make sure you disable the RHUI first
 ```
 sudo yum -y remove rh-amazon-rhui-client* rhui-azure-rhel* google-rhui-client-rhel*
-sudo cat << EOF > /etc/yum/pluginconf.d/product-id.conf
+sudo bash -c 'cat << EOF > /etc/yum/pluginconf.d/product-id.conf
 [main]
 enabled=1
-EOF
+EOF'
 ```
 - Register it with subscription-manager
 ```
