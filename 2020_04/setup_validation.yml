@@ -1,10 +1,33 @@
-- name: Fetch remediation playbooks through the Insights API
+- name: Check system requirements for the webinar hands-on
   hosts: localhost
-  gather_fact: false
+  gather_facts: false
+  vars_prompt:
+    - name: redhat_username
+      private: false
+    - name: redhat_password
 
   tasks:
-    - name: Check connectivity to cloud.redhat.com
+    - name: Check RHSM registration
+      command: subscription-manager status
+      become: true
+      changed_when: false
 
-    - name: Check authentication to Insights
+    - name: Check connectivity to cloud.redhat.com
+      uri:
+        url: 'https://cloud.redhat.com'
+        method: GET
+        status_code: 200
+
+    - name: Check authentication to the Insights API
+      uri:
+        url: 'https://cloud.redhat.com/api/remediations/v1/remediations'
+        method: GET
+        status_code: 200
+        url_username: '{{ redhat_username }}'
+        url_password: '{{ redhat_password }}'
+        force_basic_auth: true
 
     - name: Check Insights agent on the system
+      command: insights-client --test-connection
+      become: true
+      changed_when: false
