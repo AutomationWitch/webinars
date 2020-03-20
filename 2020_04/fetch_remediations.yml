@@ -2,9 +2,9 @@
   hosts: localhost
   gather_facts: false
   vars_prompt:
-    - name: insights_username
+    - name: redhat_username
       private: false
-    - name: insights_password
+    - name: redhat_password
 
   tasks:
     - name: Get remediation plans list
@@ -12,8 +12,8 @@
         url: 'https://cloud.redhat.com/api/remediations/v1/remediations'
         method: GET
         status_code: 200
-        url_username: '{{ insights_username }}'
-        url_password: '{{ insights_password }}'
+        url_username: '{{ redhat_username }}'
+        url_password: '{{ redhat_password }}'
         force_basic_auth: true
       register: plan_list
 
@@ -25,7 +25,7 @@
       get_url:
         url: 'https://cloud.redhat.com/api/remediations/v1/remediations/{{ item.id }}/playbook'
         dest: ./{{ item.name }}.yml
-        url_username: '{{ insights_username }}'
-        url_password: '{{ insights_password }}'
+        url_username: '{{ redhat_username }}'
+        url_password: '{{ redhat_password }}'
         force_basic_auth: true
       loop: '{{ plan_list.json.data }}'
