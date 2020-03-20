@@ -5,7 +5,7 @@
 - Red Hat Developer accounts may not work with Insights
 
 ## Prepare your environment
-### These steps are optional and only needed if your system is not ready for the hands-on
+**These steps are optional and only needed if your system is not ready for the hands-on**
 
 - Install a RHEL 7 or RHEL 8 system (directions will cover RHEL 8)
 - If you are using a RHEL on a public cloud provider make sure you disable the RHUI first
@@ -22,7 +22,7 @@ sudo subscription-manager register --auto-attach
 ```
 - Install Ansible and Insights agent
 ```
-sudo yum install ansible insights-client --enablerepo=ansible-2-for-rhel-8-x86_64-rpms
+sudo yum -y install ansible insights-client --enablerepo=ansible-2-for-rhel-8-x86_64-rpms
 ```
 - Register your system to Insights
 ```
@@ -31,9 +31,15 @@ sudo insights-client --register
 
 
 ## Ensure your system is ready
-### This is mandatory
-#### If your system shows errors you will not be able to do the hands-on
-#### Go back to preparation steps if needed
+**This is mandatory**
+If your system shows errors you will not be able to do the hands-on.
+Go back to preparation steps if needed.
+
+- Clone this repository or download both playbooks from this directory :
+```
+curl -O https://raw.githubusercontent.com/AutomationWitch/webinars/master/2020_04/setup_validation.yml
+curl -O https://raw.githubusercontent.com/AutomationWitch/webinars/master/2020_04/fetch_remediations.yml
+```
 
 - Launch the setup_validation.yml playbook with the following command (you need ansible)
 ```
