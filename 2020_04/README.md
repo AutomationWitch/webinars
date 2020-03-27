@@ -1,7 +1,7 @@
 # Directions
 
 ## Ensure you have a RHEL subscription available
-- You can use a 30 Day Red Hat Enterprise Linux Server Self-Supported Evaluation available [here](https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux/try-it)
+- You can use a 30 Day Red Hat Enterprise Linux Server Self-Supported Evaluation available [here](https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux/try-it) **if you already have access to Insights** (you can test your account here [cloud.redhat.com](https://cloud.redhat.com/insights/overview))
 - Red Hat Developer accounts may not work with Insights
 
 ## Prepare your environment
