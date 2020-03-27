@@ -49,6 +49,8 @@ You should get **4 OK statements** and no errors at the end of the playbook exec
 
 If your system shows errors you will not be able to do the hands-on. Go back to preparation steps if needed.
 
+*If used an Evaluation Subscription for your RHEL server, allow some time after registering it to Insights for the service to launch.*
+
 
 ## Follow the hands-on during the Webinar
 
