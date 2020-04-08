@@ -45,7 +45,7 @@ ansible-playbook setup_validation.yml -K
 ```
 *The playbook will prompt for a BECOME (sudo) password and then for your Red Hat credentials.*
 
-You should get **4 OK statements** and no errors at the end of the playbook execution.
+You should get **5 OK statements** and no errors at the end of the playbook execution.
 
 If your system shows errors you will not be able to do the hands-on. Go back to preparation steps if needed.
 
