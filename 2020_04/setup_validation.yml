@@ -27,7 +27,12 @@
         url_password: '{{ redhat_password }}'
         force_basic_auth: true
 
-    - name: Check Insights agent on the system
+    - name: Check Insights agent connectivity
       command: insights-client --test-connection
+      become: true
+      changed_when: false
+      
+    - name: Check Insights agent registration
+      command: insights-client --status
       become: true
       changed_when: false
