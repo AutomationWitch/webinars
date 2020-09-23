@@ -36,7 +36,7 @@ sudo systemctl enable --now cockpit.socket
 ```
 - Fix permissions to allow reports display in the Web Console
 ```
-sudo chown root:adm /var/log/leapp && chmod 750 /var/log/leapp
+sudo chown root:adm /var/log/leapp && sudo chmod 750 /var/log/leapp
 ```
 - Download repo mapping and rpm change files
 ```
