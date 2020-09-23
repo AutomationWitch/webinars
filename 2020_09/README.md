@@ -56,11 +56,11 @@ echo "demo" | sudo passwd --stdin demo
 
 - Reach your system with a web browser on the :9090 HTTPS port
 
-: *Example : https://1.2.3.4:9090*
+> *Example : https://1.2.3.4:9090*
 
 - Log in with the **demo** user in privileged mode (password: demo)
 
-: **Check *"Reuse my password for privileged tasks"* on the login page**
+> **Check *"Reuse my password for privileged tasks"* on the login page**
 
 - Make sure the **In-Place Upgrade Report** tab is visible on the left
 
