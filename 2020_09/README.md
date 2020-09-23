@@ -70,8 +70,7 @@ sudo bash -c 'echo "Hello World" > /var/www/html/index.html'
 - Reach your system with a web browser on the :9090 HTTPS port
 > *Example : https://1.2.3.4:9090*
 
-- Log in with the **demo** user in privileged mode (password: demo)
-> **Check *"Reuse my password for privileged tasks"* on the login page**
+- Log in with the **demo** user (password: demo)
 
 - Make sure the **In-Place Upgrade Report** tab is visible on the left
 
