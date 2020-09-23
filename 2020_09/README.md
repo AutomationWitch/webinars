@@ -29,7 +29,7 @@ sudo yum -y install leapp leapp-repository cockpit cockpit-leapp
 ```
 - Enable the web console
 ```
-- sudo systemctl enable --now cockpit.socket
+sudo systemctl enable --now cockpit.socket
 ```
 - Fix permissions to allow reports display in the Web Console
 ```
@@ -47,8 +47,8 @@ sudo reboot
 
 - Create the demo user or make sure you have a system user with similar privileges
 ```
-useradd -G wheel,adm demo
-echo "demo" | passwd --stdin demo
+sudo useradd -G wheel,adm demo
+echo "demo" | sudo passwd --stdin demo
 ```
 
 
@@ -58,7 +58,7 @@ echo "demo" | passwd --stdin demo
 
 *Example : https://1.2.3.4:9090*
 
-- Log in with the **demo** user in privileged mode
+- Log in with the **demo** user in privileged mode (password: demo)
 
 **Check *"Reuse my password for privileged tasks"* on the login page**
 
