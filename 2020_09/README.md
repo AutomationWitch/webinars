@@ -1,3 +1,5 @@
+# [Webinar link](https://www.redhat.com/fr/events/webinar/red-hat-enterprise-linux-tout-savoir-sur-les-montees-de-version-2020)
+
 # Directions
 
 ## Ensure you have a RHEL subscription available
