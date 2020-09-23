@@ -48,9 +48,13 @@ sudo reboot
 ## Ensure your system is ready
 
 - Reach your system with a web browser on the :9090 HTTPS port
+
 *Example : https://1.2.3.4:9090*
+
 - Log in with the handson user in privileged mode
+
 **Check *Reuse my password for privileged tasks* on the login page**
+
 - Make sure the **In-Place Upgrade Report** tab is visible on the left
 
 ## Follow the hands-on during the Webinar
