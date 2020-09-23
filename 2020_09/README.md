@@ -59,7 +59,7 @@ sudo reboot
 ```
 sudo yum -y install httpd
 sudo systemctl enable --now httpd
-echo "Hello World" > /var/www/html/index.html
+sudo bash -c 'echo "Hello World" > /var/www/html/index.html'
 ```
 - Change some configuration files as you usually would on your systems
 
