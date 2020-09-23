@@ -45,15 +45,22 @@ sudo curl -o /etc/leapp/files/repomap.csv https://raw.githubusercontent.com/Auto
 sudo reboot
 ```
 
+- Create the demo user or make sure you have a system user with similar privileges
+```
+useradd -G wheel,adm demo
+echo "demo" | passwd --stdin demo
+```
+
+
 ## Ensure your system is ready
 
 - Reach your system with a web browser on the :9090 HTTPS port
 
 *Example : https://1.2.3.4:9090*
 
-- Log in with the handson user in privileged mode
+- Log in with the **demo** user in privileged mode
 
-**Check *Reuse my password for privileged tasks* on the login page**
+**Check *"Reuse my password for privileged tasks"* on the login page**
 
 - Make sure the **In-Place Upgrade Report** tab is visible on the left
 
